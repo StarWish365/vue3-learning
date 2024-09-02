@@ -1,0 +1,93 @@
+/* 基本样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 容器样式 */
+.container {
+    background-color: white;
+    width: 350px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 标题样式 */
+h1 {
+    font-size: 24px;
+    color: #b34e4e;
+    margin-bottom: 20px;
+}
+
+/* 输入框和按钮的容器样式 */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* 输入框样式 */
+input[type="text"] {
+    width: 65%;
+    padding: 10px;
+    border: 1px solid #b34e4e;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #b34e4e;
+    outline: none;
+}
+
+/* 按钮样式 */
+button {
+    background-color: #b34e4e;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    float: right;
+}
+
+/* 按钮悬停效果 */
+button:hover {
+    background-color: #a43f3f;
+}
+
+/* 任务列表样式 */
+#task-list {
+    list-style-type: none;
+    text-align: left;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+/* 任务列表项样式 */
+#task-list li {
+    font-size: 18px;
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* 页脚样式 */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    color: #333;
+}
