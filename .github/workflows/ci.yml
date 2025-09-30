@@ -30,8 +30,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Verify vite installation
-      run: npm list vite
+    - name: Reinstall vite to fix version mismatch
+      run: npm install vite@^6.3.6 --save-dev
 
     - name: Build
       run: npm run build
