@@ -7,7 +7,6 @@ module.exports = {
   },
   extends: [
     'eslint:recommended',
-    '@typescript-eslint/recommended',
     'plugin:react-hooks/recommended',
     'prettier',
   ],
@@ -22,16 +21,11 @@ module.exports = {
   },
   plugins: [
     'react-hooks',
-    'react-refresh',
     '@typescript-eslint',
     'prettier',
   ],
   rules: {
     'prettier/prettier': 'error',
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
     '@typescript-eslint/explicit-function-return-type': 'off',
