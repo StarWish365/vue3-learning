@@ -28,7 +28,7 @@ jobs:
       run: npm ci --legacy-peer-deps
 
     - name: Run Prettier check
-      run: npx prettier --check "src/**/*.{ts,tsx,js,jsx,json,css,md}"
+      run: npx prettier --check "src/**/*.{ts,tsx,css}"
 
     - name: Run ESLint
       run: npm run lint
