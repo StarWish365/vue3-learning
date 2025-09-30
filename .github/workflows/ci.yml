@@ -27,10 +27,13 @@ jobs:
       run: npm ci
       
     - name: Verify react-scripts installation
-      run: npx react-scripts --version
+      run: ./node_modules/.bin/react-scripts --version
+      
+    - name: Run tests
+      run: npm test -- --coverage --watchAll=false
       
     - name: Build
-      run: npx react-scripts build
+      run: ./node_modules/.bin/react-scripts build
       
     - name: Deploy to GitHub Pages
       if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
