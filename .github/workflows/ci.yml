@@ -24,8 +24,11 @@ jobs:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
 
+    - name: Clear npm cache
+      run: npm cache clean --force
+      
     - name: Install dependencies
-      run: npm install
+      run: npm ci
 
     - name: Build
       run: npm run build
@@ -33,6 +36,6 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        folder: dist
+        folder: build
         branch: gh-pages
         clean: true
