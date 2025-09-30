@@ -29,11 +29,12 @@ jobs:
         rm -f package-lock.json
         echo "Installing dependencies with npm install"
         npm install
-        echo "Verifying installation"
-        ls -la node_modules/.bin/ | head -10
       
-    - name: Verify react-scripts installation
-      run: ./node_modules/.bin/react-scripts --version
+    - name: Code Quality - ESLint
+      run: npm run lint
+      
+    - name: Code Quality - Prettier Check
+      run: npm run format:check
       
     - name: Run tests
       run: npm test -- --coverage --watchAll=false
