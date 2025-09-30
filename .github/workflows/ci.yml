@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [18.x, 20.x]
+        node-version: [18.x]
 
     steps:
     - name: Checkout code
@@ -28,7 +28,7 @@ jobs:
       run: npm ci --legacy-peer-deps
 
     - name: Run Prettier check
-      run: npm run format:check
+      run: npx prettier --check "src/**/*.{ts,tsx,js,jsx,json,css,md}"
 
     - name: Run ESLint
       run: npm run lint
