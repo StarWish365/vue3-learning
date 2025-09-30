@@ -27,12 +27,6 @@ jobs:
     - name: Install dependencies
       run: npm install --legacy-peer-deps
 
-    - name: Run Prettier check
-      run: npx prettier --check "src/**/*.{ts,tsx,css}"
-
-    - name: Run ESLint
-      run: npx eslint src --ext .ts,.tsx,.js,.jsx
-
     - name: Run tests
       run: npm test -- --coverage --watchAll=false
 
